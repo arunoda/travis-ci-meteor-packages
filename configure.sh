@@ -7,5 +7,5 @@ wget https://raw.github.com/arunoda/travis-ci-meteor-packages/master/start_test.
 #installing meteor
 git clone https://github.com/meteor/meteor.git ./meteor
 cd ./meteor
-git checkout release/0.6.3.1
+git checkout release/0.6.4
 cd ..
