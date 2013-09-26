@@ -2,7 +2,7 @@
 var spawn = require('child_process').spawn;
 
 var packageDir = process.env.PACKAGE_DIR || './';
-var meteor = spawn('mrt', ['test-packages', '--driver-package', 'test-in-console', '-p', 10015, './'], {cwd: packageDir});
+var meteor = spawn('mrt', ['test-packages', '--once', '--driver-package', 'test-in-console', '-p', 10015, './'], {cwd: packageDir});
 meteor.stdout.pipe(process.stdout);
 meteor.stderr.pipe(process.stderr);
 
