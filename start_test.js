@@ -5,6 +5,10 @@ var packageDir = process.env.PACKAGE_DIR || './';
 var meteor = spawn('mrt', ['test-packages', '--once', '--driver-package', 'test-in-console', '-p', 10015, './'], {cwd: packageDir});
 meteor.stdout.pipe(process.stdout);
 meteor.stderr.pipe(process.stderr);
+meteor.on('close', function (code) {
+  console.log('mrt exited with code ' + code);
+  process.exit(code);
+});
 
 meteor.stdout.on('data', function startTesting(data) {
   var data = data.toString();
