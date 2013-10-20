@@ -17,4 +17,8 @@ Enable travis support for your project listed there.
 
 ![Meteor Cluster - Travis Support](http://i.imgur.com/JY9o3xm.png)
 
+You can configure tests with two environment variables:
+ * `WORKING_DIR` -- working directory to run `mrt` from
+ * `PACKAGES` -- list of packages names or directories to test, separated by `;`, by default `./`; specfiy empty string to test all packages
+
 See [here](http://meteorhacks.com/travis-ci-support-for-meteor-packages.html) for more information
