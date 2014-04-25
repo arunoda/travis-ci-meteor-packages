@@ -3,6 +3,9 @@ var spawn = require('child_process').spawn;
 
 var workingDir = process.env.WORKING_DIR || process.env.PACKAGE_DIR || './';
 var args = ['test-packages', '--once', '--driver-package', 'test-in-console', '-p', 10015];
+if (process.env.PRODUCTION) {
+  args.push('--production');
+}
 if (typeof process.env.PACKAGES === 'undefined') {
   args.push('./');
 }
