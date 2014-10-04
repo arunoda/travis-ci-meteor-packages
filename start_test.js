@@ -19,7 +19,7 @@ else if (process.env.PACKAGES !== '') {
   args = args.concat(process.env.PACKAGES.split(';'));
 }
 
-var meteor = spawn((process.env.TEST_COMMAND || 'mrt'), args, {cwd: workingDir});
+var meteor = spawn((process.env.TEST_COMMAND || 'meteor'), args, {cwd: workingDir});
 meteor.stdout.pipe(process.stdout);
 meteor.stderr.pipe(process.stderr);
 meteor.on('close', function (code) {
