@@ -10,5 +10,3 @@ curl https://install.meteor.com | /bin/sh
 
 #installing meteorite
 npm install -g meteorite
-
-mrt update
