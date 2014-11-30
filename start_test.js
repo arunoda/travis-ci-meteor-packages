@@ -4,13 +4,19 @@ var spawn = require('child_process').spawn;
 var workingDir = process.env.WORKING_DIR || process.env.PACKAGE_DIR || './';
 var args = ['test-packages', '--once', '--driver-package', 'test-in-console', '-p', 10015];
 
-
-if (typeof process.env.METEOR_RELEASE !== 'undefined' &&
-    process.env.METEOR_RELEASE !== '') {
-    args.push('--release');
-    args.push(process.env.METEOR_RELEASE);
+var variableArgDefs = {
+  'METEOR_RELEASE': '--release',
+  'SETTINGS_FILE': '--settings'
 }
 
+for(var envVar in variableArgDefs){
+  if(variableArgDefs.hasOwnProperty(envVar) &&
+       typeof process.env[envVar] !== 'undefined' &&
+       process.env[envVar] !== ''){
+     args.push(variableArgDefs[envVar]);
+     args.push(process.env[envVar]);
+  }
+}
 
 if (typeof process.env.PACKAGES === 'undefined') {
   args.push('./');
