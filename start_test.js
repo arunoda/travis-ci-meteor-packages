@@ -23,7 +23,7 @@ var meteor = spawn((process.env.TEST_COMMAND || 'meteor'), args, {cwd: workingDi
 meteor.stdout.pipe(process.stdout);
 meteor.stderr.pipe(process.stderr);
 meteor.on('close', function (code) {
-  console.log('mrt exited with code ' + code);
+  console.log('meteor exited with code ' + code);
   process.exit(code);
 });
 
