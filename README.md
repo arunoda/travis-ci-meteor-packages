@@ -18,9 +18,9 @@ Enable travis support for your project listed there.
 ![Meteor Cluster - Travis Support](http://i.imgur.com/JY9o3xm.png)
 
 You can configure tests with two environment variables:
- * `WORKING_DIR` -- working directory to run `mrt` from
+ * `WORKING_DIR` -- working directory to run `meteor` from
  * `PACKAGES` -- list of package names or directories to test, separated by `;`, by default `./`; specfiy empty string to test all packages
- * `TEST_COMMAND` -- you can specify a custom command to run, instead of default `mrt`, it gets all the arguments `mrt` would; this is useful if you want to do some more pre- or post-processing
+ * `TEST_COMMAND` -- you can specify a custom command to run, instead of default `meteor`, it gets all the arguments `meteor` would; this is useful if you want to do some more pre- or post-processing
  * `METEOR_RELEASE` -- you can specify the meteor release to run the tests with.
 
 See [here](http://meteorhacks.com/travis-ci-support-for-meteor-packages.html) for more information
