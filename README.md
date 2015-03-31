@@ -16,11 +16,10 @@ node_js:
   
 before_install:
   - "curl -L http://git.io/ejPSng | /bin/sh"
-#  - "npm install -g spacejam"
-
-# script; "spacejam test-packages ./"
 
 ```
+
+**URGENT UPDATE** (2015/03/31) : Please note that the latest version of .travis.yaml now includes "sudo: required" to cope with new permissions constraints in Travis virtual machines.
 
 Login to [https://travis-ci.org](https://travis-ci.org) with Github and navigate to [https://travis-ci.org/profile](https://travis-ci.org/profile)
 
