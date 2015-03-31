@@ -1,7 +1,15 @@
-#add this file to your meteor package as `.travis.yml`
+## Add this file to your meteor package as `.travis.yml`
+
+sudo: required
 language: node_js
 node_js:
   - "0.8"
   - "0.10"
+  
 before_install:
   - "curl -L http://git.io/ejPSng | /bin/sh"
+#  - "npm install -g spacejam"
+
+# script; "spacejam test-packages ./"
+
+
