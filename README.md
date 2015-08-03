@@ -15,7 +15,7 @@ node_js:
   - "0.10"
   
 before_install:
-  - "curl -L http://git.io/ejPSng | /bin/sh"
+  - "curl -L https://git.io/ejPSng | /bin/sh"
 
 ```
 
