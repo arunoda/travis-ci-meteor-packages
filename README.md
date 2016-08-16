@@ -11,15 +11,24 @@ Add following file to your meteor package as `.travis.yml`
 sudo: required
 language: node_js
 node_js:
-  - "0.8"
   - "0.10"
   
 before_install:
   - "curl -L http://git.io/ejPSng | /bin/sh"
 
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 ```
 
-**URGENT UPDATE** (2015/03/31) : Please note that the latest version of .travis.yaml now includes "sudo: required" to cope with new permissions constraints in Travis virtual machines.
+**UPDATE** (2015/03/31) : Please note that the latest version of .travis.yaml now includes "sudo: required" to cope with new permissions constraints in Travis virtual machines.
+
+**UPDATE** (2016/08/16) : The latest version of .travis.yaml now includes a compiler to compile the bcrypt NPM module.
 
 Login to [https://travis-ci.org](https://travis-ci.org) with Github and navigate to [https://travis-ci.org/profile](https://travis-ci.org/profile)
 
