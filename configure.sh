@@ -7,6 +7,3 @@ wget https://raw.github.com/arunoda/travis-ci-meteor-packages/master/phantom_run
 
 #install meteor
 curl https://install.meteor.com | /bin/sh
-
-#installing meteorite
-npm install -g meteorite
