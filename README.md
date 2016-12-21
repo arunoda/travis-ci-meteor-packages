@@ -41,6 +41,7 @@ You can configure tests with two environment variables:
  * `PACKAGES` -- list of package names or directories to test, separated by `;`, by default `./`; specfiy empty string to test all packages
  * `TEST_COMMAND` -- you can specify a custom command to run, instead of default `meteor`, it gets all the arguments `meteor` would; this is useful if you want to do some more pre- or post-processing
  * `METEOR_RELEASE` -- you can specify the meteor release to run the tests with.
+ * `SETTINGS_FILE` -- you can specify a JSON file to load into `Meteor.settings` on the server
 
 If you would like to specify more arguments (such as `--settings`), create a simple shell script and pass the path to `TEST_COMMAND`.
 
